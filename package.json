@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "workspaces": {
     "packages": [
       "api",
@@ -7,8 +8,8 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/core": "7.1.2",
-    "@redwoodjs/project-config": "7.1.2"
+    "@redwoodjs/core": "7.1.3-next.37",
+    "@redwoodjs/project-config": "7.1.3-next.37"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",

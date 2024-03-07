@@ -20,26 +20,85 @@ upgrade: install
 # run
 # ---
 
+run-build:
+	yarn rw build --verbose
+
+run-check:
+	yarn rw check
+
 run-dev:
 	yarn rw dev
 
-run-build:
-	yarn rw build --verbose
+run-exp:
+	yarn rw exp setup-docker
+	yarn rw exp setup-opentelemetry
+
+run-info:
+	yarn rw info
+
+run-prisma:
+	yarn rw prisma generate
+	yarn rw prisma studio
+	yarn rw prisma migrate dev
 
 run-serve: run-build
 	yarn rw serve
 
-run-tests:
-	yarn rw test --no-watch
+run-studio:
+	yarn rw studio
 
 run-tsc:
 	yarn rw tsc
 
-run-seed:
-	yarn rw prisma db seed
+run-ts-to-js:
+	yarn rw ts-to-js
+
+run-upgrade:
+	yarn rw upgrade
+
+# ❓ tbd
+# ------
+
+run-setup:
+	yarn rw setup
+
+run-deploy:
+	yarn rw deploy
+
+# ❌ broken
+# ---------
+
+# ?
+run-storybook:
+	yarn rw storybook
+
+# prettier
+run-exp-setup-inngest:
+	yarn rw exp setup-inngest
+
+# if i rename prettier.config.js to prettier.config.cjs, it works
+run-lint:
+	yarn rw lint
+
+# jest
+run-tests:
+	yarn rw test --no-watch
+
+# babel register
+run-console:
+	yarn rw console
+
+run-data-migrate:
+	yarn rw data-migrate
+
+run-exec:
+	yarn rw exec
 
 run-prerender: run-build
 	yarn rw prerender --verbose
+
+run-seed:
+	yarn rw prisma db seed
 
 # files
 # -----

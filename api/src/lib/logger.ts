@@ -1,4 +1,4 @@
-import { createLogger } from '@redwoodjs/api/logger'
+import { createLogger } from '@redwoodjs/api/logger/index.js'
 
 /**
  * Creates a logger with RedwoodLoggerOptions
